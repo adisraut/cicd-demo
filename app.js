@@ -4,10 +4,10 @@ const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   res.json({ 
-    message: 'Hello from CI/CD Pipeline!',
-    version: '1.0.0',
-    timestamp: new Date().toISOString()
-  });
+  message: 'Hello from CI/CD Pipeline!',
+  version: '2.0.0',  // Changed from 1.0.0
+  timestamp: new Date().toISOString()
+});
 });
 
 app.get('/health', (req, res) => {
