@@ -14,8 +14,11 @@ app.get('/health', (req, res) => {
   res.json({ status: 'healthy' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Only start server if file is run directly
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 
 module.exports = app;
